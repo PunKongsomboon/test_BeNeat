@@ -14,7 +14,7 @@ const formData = ref({
     <div class="container">
         <div class="text-center">
             <h2>Photo (components, props)</h2>
-            <div>โจทย์: ให้สร้าง User component ในหน้านี้และทำการส่งข้อมูลจาก Form ไปยัง User component ผ่าน Props</div>
+            <div class="text-start">โจทย์: ให้สร้าง User component ในหน้านี้และทำการส่งข้อมูลจาก Form ไปยัง User component ผ่าน Props</div>
         </div>
         <form class="mb-4">
             <div class="form-group mb-3">

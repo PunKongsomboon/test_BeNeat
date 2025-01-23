@@ -4,6 +4,7 @@ import Exercise3Vue from "@/views/Exercise3.vue";
 import Exercise4Vue from "@/views/Exercise4.vue";
 import Exercise5Vue from "@/views/Exercise5.vue";
 import Exercise6Vue from "@/views/Exercise6.vue";
+import Exercise7Vue from "@/views/Exercise7.vue";
 import Vue from "vue";
 import VueRouter from "vue-router";
 
@@ -42,6 +43,11 @@ const router = new VueRouter({
       path: "/exercise-6",
       name: "exerciseSix",
       component: Exercise6Vue,
+    },
+    {
+      path: "/exercise-7",
+      name: "exerciseSeven",
+      component: Exercise7Vue,
     },
   ],
 });

@@ -12,7 +12,7 @@ const onSelectValue = (value: AnimalEnum) => {
 
 </script>
 <template>
-    <div class="container-fluid">
+    <div class="container">
         <div class="col text-center mt-5">
             <h2> Animals (v-if / v-else-if / v-else)</h2>
             <div>โจทย์: ให้แสดงผลข้อมูลตามการกดปุ่ม</div>

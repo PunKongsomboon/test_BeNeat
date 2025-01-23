@@ -1,14 +1,11 @@
 <script setup lang="ts">
+import type { PropType } from 'vue';
+
+
 defineProps({
-    name: {
-        type: String,
-    },
-    age: {
-        type: String,
-    },
-    img: {
-        type: String,
-    },
+    userData: {
+        type: Object as PropType<IUserData>,
+    }
 })
 </script>
 
@@ -16,10 +13,10 @@ defineProps({
     <div class="container user-component text-center py-4">
         <h2>User Component</h2>
         <div class="my-3">
-            <div>Name: {{ name }}</div>
-            <div>Age: {{ age }}</div>
+            <div>Name: {{ userData?.name }}</div>
+            <div>Age: {{ userData?.age }}</div>
         </div>
-        <img :src="img">
+        <img :src="userData?.img">
     </div>
 </template>
 

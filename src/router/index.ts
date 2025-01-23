@@ -3,6 +3,7 @@ import Exercise2Vue from "@/views/Exercise2.vue";
 import Exercise3Vue from "@/views/Exercise3.vue";
 import Exercise4Vue from "@/views/Exercise4.vue";
 import Exercise5Vue from "@/views/Exercise5.vue";
+import Exercise6Vue from "@/views/Exercise6.vue";
 import Vue from "vue";
 import VueRouter from "vue-router";
 
@@ -36,6 +37,11 @@ const router = new VueRouter({
       path: "/exercise-5",
       name: "exerciseFive",
       component: Exercise5Vue,
+    },
+    {
+      path: "/exercise-6",
+      name: "exerciseSix",
+      component: Exercise6Vue,
     },
   ],
 });

@@ -56,16 +56,16 @@ const clearDate = () => {
                             <label for="name" class="my-2">ชื่อ</label>
                             <input v-model="formData.name" id="name" class="form-control" type="text" />
                         </div>
-                        <div class="form-group">
-                            <label for="phone">เบอร์โทร</label>
+                        <div class="form-group mb-3">
+                            <label for="phone" class="my-2">เบอร์โทร</label>
                             <input v-model="formData.phone" id="phone" class="form-control" type="text" />
                         </div>
                         <div class="form-group">
-                            <label for="name">ที่อยู่</label>
+                            <label for="name" class="my-2">ที่อยู่</label>
                             <textarea v-model="formData.address" class="form-control" type="text" rows="2"></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="name">เพศ</label>
+                        <div class="form-group mb-3">
+                            <label for="name" class="my-2">เพศ</label>
 
                             <div class="gap-2 d-flex">
                                 <input type="radio" id="maleChoice" name="genderChoice" v-model="formData.gender"
@@ -79,8 +79,8 @@ const clearDate = () => {
                             </div>
 
                         </div>
-                        <div class="form-group">
-                            <label for="name">ระดับการศึกษา</label>
+                        <div class="form-group mb-3">
+                            <label for="name" class="my-2">ระดับการศึกษา</label>
                             <select class="form-select" v-model="formData.education">
                                 <option value="" selected>เลือกระดับการศึกษา</option>
                                 <option value="ประถมศึกษา">ประถมศึกษา</option>

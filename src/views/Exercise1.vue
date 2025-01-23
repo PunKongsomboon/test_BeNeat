@@ -18,16 +18,16 @@ const onSelectValue = (value: AnimalEnum) => {
             <div>โจทย์: ให้แสดงผลข้อมูลตามการกดปุ่ม</div>
 
             <div class="row justify-content-around mt-4">
-                <button class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.DOG)">
+                <button type="button" class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.DOG)">
                     Dogs
                 </button>
-                <button class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.CAT)">
+                <button type="button" class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.CAT)">
                     Cats
                 </button>
-                <button class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.BIRD)">
+                <button type="button" class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.BIRD)">
                     Bird
                 </button>
-                <button class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.RABBITS)">
+                <button type="button" class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.RABBITS)">
                     Rabbits
                 </button>
             </div>

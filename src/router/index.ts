@@ -1,4 +1,5 @@
 import Exercise1Vue from "@/views/Exercise1.vue";
+import Exercise2Vue from "@/views/Exercise2.vue";
 import Vue from "vue";
 import VueRouter from "vue-router";
 
@@ -12,6 +13,11 @@ const router = new VueRouter({
       path: "/",
       name: "exerciseOne",
       component: Exercise1Vue,
+    },
+    {
+      path: "/exercise-2",
+      name: "exerciseTwo",
+      component: Exercise2Vue,
     },
   ],
 });

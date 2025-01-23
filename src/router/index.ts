@@ -1,4 +1,4 @@
-import HomePageVue from "@/views/HomePage.vue";
+import Exercise1Vue from "@/views/Exercise1.vue";
 import Vue from "vue";
 import VueRouter from "vue-router";
 
@@ -10,17 +10,9 @@ const router = new VueRouter({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: HomePageVue,
+      name: "exerciseOne",
+      component: Exercise1Vue,
     },
-    // {
-    //   path: "/about",
-    //   name: "about",
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import("../views/AboutView.vue"),
-    // },
   ],
 });
 

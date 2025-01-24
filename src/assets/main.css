@@ -22,6 +22,7 @@ a,
 }
 
 .neumorphic-btn {
+  max-width: fit-content;
   background: var(--primary-bg-color);
   border: none;
   border-radius: 16px;

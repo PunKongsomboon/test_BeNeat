@@ -19,16 +19,16 @@ const onSelectValue = (value: AnimalEnum) => {
                 <div class="my-5">โจทย์: ให้แสดงผลข้อมูลตามการกดปุ่ม</div>
             </div>
             <div class="row justify-content-around mt-4">
-                <button type="button" class="neumorphic-btn col-1" @click="onSelectValue(AnimalEnum.DOG)">
+                <button type="button" class="neumorphic-btn" @click="onSelectValue(AnimalEnum.DOG)">
                     Dogs
                 </button>
-                <button type="button" class="neumorphic-btn col-1" @click="onSelectValue(AnimalEnum.CAT)">
+                <button type="button" class="neumorphic-btn" @click="onSelectValue(AnimalEnum.CAT)">
                     Cats
                 </button>
-                <button type="button" class="neumorphic-btn col-1" @click="onSelectValue(AnimalEnum.BIRD)">
+                <button type="button" class="neumorphic-btn" @click="onSelectValue(AnimalEnum.BIRD)">
                     Bird
                 </button>
-                <button type="button" class="neumorphic-btn col-1" @click="onSelectValue(AnimalEnum.RABBITS)">
+                <button type="button" class="neumorphic-btn" @click="onSelectValue(AnimalEnum.RABBITS)">
                     Rabbits
                 </button>
             </div>

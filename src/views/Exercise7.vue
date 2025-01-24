@@ -67,7 +67,7 @@ const onSubmit = async () => {
         <div class="d-flex justify-content-center mt-3">
             <div class="card col-6">
                 <div class="card-body">
-                    <form @submit.prevent="onSubmit()">
+                    <form @submit.prevent="onSubmit()" class="text-start">
                         <div class="form-group mb-3">
                             <label class="mb-2">ชื่อ</label>
                             <input type="text" id="name" class="form-control" v-model="formData.name">

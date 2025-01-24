@@ -13,21 +13,22 @@ const onSelectValue = (value: AnimalEnum) => {
 </script>
 <template>
     <div class="container">
-        <div class="col text-center mt-5">
-            <h2> Animals (v-if / v-else-if / v-else)</h2>
-            <div>โจทย์: ให้แสดงผลข้อมูลตามการกดปุ่ม</div>
-
+        <div class="col text-center">
+            <div>
+                <h2> Animals (v-if / v-else-if / v-else)</h2>
+                <div class="my-5">โจทย์: ให้แสดงผลข้อมูลตามการกดปุ่ม</div>
+            </div>
             <div class="row justify-content-around mt-4">
-                <button type="button" class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.DOG)">
+                <button type="button" class="neumorphic-btn col-1" @click="onSelectValue(AnimalEnum.DOG)">
                     Dogs
                 </button>
-                <button type="button" class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.CAT)">
+                <button type="button" class="neumorphic-btn col-1" @click="onSelectValue(AnimalEnum.CAT)">
                     Cats
                 </button>
-                <button type="button" class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.BIRD)">
+                <button type="button" class="neumorphic-btn col-1" @click="onSelectValue(AnimalEnum.BIRD)">
                     Bird
                 </button>
-                <button type="button" class="btn btn-primary col-1" @click="onSelectValue(AnimalEnum.RABBITS)">
+                <button type="button" class="neumorphic-btn col-1" @click="onSelectValue(AnimalEnum.RABBITS)">
                     Rabbits
                 </button>
             </div>
@@ -45,4 +46,3 @@ const onSelectValue = (value: AnimalEnum) => {
         </div>
     </div>
 </template>
-<style scoped></style>

@@ -24,7 +24,7 @@ const listItem = ref<IItemList[]>([
     <div class="container">
         <div class="text-center">
             <h2>Products (components & array data)</h2>
-            <div class="text-start">
+            <div class="my-4">
                 <div>โจทย์: ให้สร้าง Item component และนำมาใช้กับข้อมูล Array แสดงผลเป็นฟอร์มให้ผู้ใช้กรอกทางฝั่งซ้าย
                     โดยผู้ใช้สามารถเพิ่มรายการได้ ส่วนการแสดงผลข้อมูลฝั่งขวาเป็นสรุปรายการ Item List</div>
             </div>
@@ -33,11 +33,12 @@ const listItem = ref<IItemList[]>([
         <div class="row mt-3">
             <div class="col">
                 <div class="row gap-3">
-                    <div class="card col-3" v-for="(item, index) in listItem" :key="index">
-                        <div class="card-body text-left">
+                    <div class="neumorphic-card col-3" v-for="(item, index) in listItem" :key="index">
+                        <div class="card-body text-start">
                             <div>Item ID: {{ item.id }}</div>
                             <div class="mt-3">
-                                <div class="form-group"><label>Item Name</label>
+                                <div class="form-group">
+                                    <label class="mb-2">Item Name</label>
                                     <input type="text" placeholder="Enter name" class="form-control"
                                         v-model="item.name">
                                 </div>
@@ -46,7 +47,7 @@ const listItem = ref<IItemList[]>([
                     </div>
                 </div>
                 <div class="text-center mt-5">
-                    <button type="button" class="btn btn-primary"
+                    <button type="button" class="neumorphic-btn"
                         @click="listItem.push({ id: listItem.length + 1, name: '' })">Add item</button>
                 </div>
             </div>

@@ -42,46 +42,45 @@ const clearDate = () => {
 <template>
     <div class="container">
         <div class="text-center">
-            <h2>Regsiter Form (v-model)</h2>
-            <div class="text-start">
+            <h2>Register Form (v-model)</h2>
+            <div class="my-4">
                 <div>โจทย์: ให้สร้างแบบฟอร์ม และมีการเช็ค Form Validation ข้อมูลก่อนแสดงผลลัพธ์</div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="card col-12 col-sm-7 col-md-6 col-xl-5">
+        <div class="row justify-content-center mt-4">
+            <div class="neumorphic-card-form col-12 col-sm-7 col-md-6 col-xl-5">
                 <div class="card-body">
-                    <form @submit.prevent="validateForm">
+                    <form @submit.prevent="validateForm" class="text-start">
                         <div class="form-group mb-3">
                             <label for="name" class="my-2">ชื่อ</label>
-                            <input v-model="formData.name" id="name" class="form-control" type="text" />
+                            <input v-model="formData.name" id="name" class="neumorphic-input" type="text" />
                         </div>
                         <div class="form-group mb-3">
                             <label for="phone" class="my-2">เบอร์โทร</label>
-                            <input v-model="formData.phone" id="phone" class="form-control" type="text" />
-                        </div>
-                        <div class="form-group">
-                            <label for="name" class="my-2">ที่อยู่</label>
-                            <textarea v-model="formData.address" class="form-control" type="text" rows="2"></textarea>
+                            <input v-model="formData.phone" id="phone" class="neumorphic-input" type="text" />
                         </div>
                         <div class="form-group mb-3">
-                            <label for="name" class="my-2">เพศ</label>
-
+                            <label for="address" class="my-2">ที่อยู่</label>
+                            <textarea v-model="formData.address" id="address" class="neumorphic-textarea"
+                                rows="2"></textarea>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="my-2">เพศ</label>
                             <div class="gap-2 d-flex">
                                 <input type="radio" id="maleChoice" name="genderChoice" v-model="formData.gender"
-                                    value="men">
+                                    value="men" />
                                 <label for="maleChoice">ชาย</label>
                             </div>
                             <div class="gap-2 d-flex">
                                 <input type="radio" id="femaleChoice" name="genderChoice" v-model="formData.gender"
-                                    value="women">
+                                    value="women" />
                                 <label for="femaleChoice">หญิง</label>
                             </div>
-
                         </div>
                         <div class="form-group mb-3">
-                            <label for="name" class="my-2">ระดับการศึกษา</label>
-                            <select class="form-select" v-model="formData.education">
+                            <label for="education" class="my-2">ระดับการศึกษา</label>
+                            <select id="education" class="neumorphic-select" v-model="formData.education">
                                 <option value="" selected>เลือกระดับการศึกษา</option>
                                 <option value="ประถมศึกษา">ประถมศึกษา</option>
                                 <option value="มัธยมศึกษา">มัธยมศึกษา</option>
@@ -90,40 +89,31 @@ const clearDate = () => {
                                 <option value="ปริญญาเอก">ปริญญาเอก</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="text-center">
+                            <button type="submit" class="neumorphic-btn">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>
 
-
-
-            <div class="col">
-                <div class="card" v-if="showResult">
-                    <div class="card-body text-left">
-                        <div>ชื่อ: {{ formData.name }}</div>
-                        <div>เบอร์โทร: {{ formData.phone }}</div>
-                        <div>ที่อยู่: {{ formData.address }}</div>
-                        <div>เพศ: {{ formData.gender }}</div>
-                        <div>ระดับการศึกษา: {{ formData.education }}</div>
-                        <div class="mt-4">
-                            <button class="btn btn-outline-danger btn-block" @click="clearDate">
-                                Clear Data
-                            </button>
+            <div class="col mt-4">
+                <div v-if="showResult" class="neumorphic-card mx-auto">
+                    <div class="card-body text-start">
+                        <div class="my-2">ชื่อ: {{ formData.name }}</div>
+                        <div class="my-2">เบอร์โทร: {{ formData.phone }}</div>
+                        <div class="my-2">ที่อยู่: {{ formData.address }}</div>
+                        <div class="my-2">เพศ: {{ formData.gender }}</div>
+                        <div class="my-2">ระดับการศึกษา: {{ formData.education }}</div>
+                        <div class="mt-4 text-center">
+                            <button class="neumorphic-btn" @click="clearDate">Clear Data</button>
                         </div>
                     </div>
                 </div>
-                <div v-if="showAlert" role="alert"
-                    class="alert alert-danger alert-dismissible fade show text-center p-0 d-flex align-items-center">
-                    <div class="col-10">
-                        <strong>Error:</strong>
-                        <span class="mx-2">Invalid form.</span>
-
+                <div v-if="showAlert" class="neumorphic-alert bg-danger text-white">
+                    <div>
+                        <strong>Error:</strong> Invalid form.
                     </div>
-                    <div class="col text-end">
-                        <button @click="showAlert = false" type="button" class="btn">
-                            <span>×</span>
-                        </button>
-                    </div>
+                    <button @click="showAlert = false" class="alert-close-btn">×</button>
                 </div>
             </div>
         </div>
@@ -133,5 +123,57 @@ const clearDate = () => {
 <style scoped>
 .alert {
     height: fit-content;
+}
+
+.neumorphic-card-form {
+    background: var(--primary-bg-color);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+    margin: 10px auto;
+}
+
+.neumorphic-input,
+.neumorphic-textarea,
+.neumorphic-select {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+    width: 100%;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.neumorphic-input:focus,
+.neumorphic-textarea:focus,
+.neumorphic-select:focus {
+    border: none;
+    box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+}
+
+
+.neumorphic-btn-outline:hover {
+    background: var(--primary-bg-color);
+    box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+}
+
+.neumorphic-alert {
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.alert-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
 }
 </style>

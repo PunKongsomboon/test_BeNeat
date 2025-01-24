@@ -46,19 +46,21 @@ const onSubmit = async () => {
     <div class="container">
         <div class="text-center">
             <h2>Regsiter Form (API)</h2>
-            <div class="text-start">โจทย์: ให้ทำการบันทึกข้อมูลผ่าน Restful API หากผู้ใช้เคยบันทึกข้อมูลไว้แล้ว
+            <div class="my-4 text-start">โจทย์: ให้ทำการบันทึกข้อมูลผ่าน Restful API หากผู้ใช้เคยบันทึกข้อมูลไว้แล้ว
                 และกลับมายังหน้านี้ให้เอาค่าที่บันทึกไว้ใส่ลงในฟอร์ม
-                APIs:
-                Save form data
-                Method: PUT
-                URL: https://vuejs-stock-trader-aa575.firebaseio.com/userFormData.json
-
-                Fetch form data
-                Method: GET
-                URL: https://vuejs-stock-trader-aa575.firebaseio.com/userFormData.json
-
-                Form data { "address": String, "age": String, "education": String, "email": String, "gender": String,
-                "name": String, "national": String, "newsletter": Boolean, "tel": String }</div>
+                APIs:<br />
+                <b> Save form data</b><br />
+                Method: PUT<br />
+                URL: https://vuejs-stock-trader-aa575.firebaseio.com/userFormData.json<br />
+                <br />
+                <b> Fetch form data</b> <br />
+                Method: GET <br />
+                URL: https://vuejs-stock-trader-aa575.firebaseio.com/userFormData.json <br />
+                <br />
+                Form data { "address": String, "age": String, "education": String, "email": String, "gender":
+                String,
+                "name": String, "national": String, "newsletter": Boolean, "tel": String }
+            </div>
         </div>
 
         <div class="d-flex justify-content-center mt-3">

@@ -65,24 +65,23 @@ onMounted(() => {
     <div class="container">
         <div class="text-center">
             <h2>Shopping Cart</h2>
-            <div class="text-start">โจทย์: ทำฟีเจอร์ Shopping Cart โดยแสดงรายการสินค้าฝั่งซ้าย (ดึงข้อมูลจาก API)
+            <div class="my-4 text-start">โจทย์: ทำฟีเจอร์ Shopping Cart โดยแสดงรายการสินค้าฝั่งซ้าย (ดึงข้อมูลจาก API)
                 ทางฝั่งขวา ผู้ใช้สามารถเพิ่มสินค้าลงตะกร้า แก้ไข้จำนวนสินค้า และลบรายการสินค้าที่ไม่ต้องการได้
                 เมื่อผู้ใช้ทำการกดปุ่ม Checkout ให้บันทึกรายการสินที่ในตะกร้าผ่าน API (สามารถใช้ข้อมูล Product
                 บันทึกได้เลย) และนำลูกค้าไปยังหน้าสรุปผลการสั่งซื้อ
-
-                <div>
-                    APIs:
-                    Fetch products
-                    Method: GET
-                    URL: https://vuejs-stock-trader-aa575.firebaseio.com/data.json
-
-                    Save shopping cart
-                    Method: PUT
-                    URL: https://vuejs-stock-trader-aa575.firebaseio.com/checkout.json
-
-                    Fetch shopping cart (ลูกค้ากลับเข้ามาหน้านี้อีกครั้งจะเห็นสินค้าในตะกร้า)
-                    Method: GET
-                    URL: https://vuejs-stock-trader-aa575.firebaseio.com/checkout.json
+                <div class="mt-4">
+                    APIs:<br />
+                    <b>Fetch products</b><br />
+                    Method: GET<br />
+                    URL: https://vuejs-stock-trader-aa575.firebaseio.com/data.json<br />
+                    <br />
+                    <b>Save shopping cart</b><br />
+                    Method: PUT<br />
+                    URL: https://vuejs-stock-trader-aa575.firebaseio.com/checkout.json<br />
+                    <br />
+                    <b>Fetch shopping cart (ลูกค้ากลับเข้ามาหน้านี้อีกครั้งจะเห็นสินค้าในตะกร้า)</b><br />
+                    Method: GET<br />
+                    URL: https://vuejs-stock-trader-aa575.firebaseio.com/checkout.json<br />
                 </div>
             </div>
         </div>

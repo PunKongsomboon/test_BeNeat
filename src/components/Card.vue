@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="card" style="max-width: 250px;">
+    <div class="card p-0" style="max-width: 250px;">
         <img :src="img" class="card-img-top" :alt="title">
         <div class="card-body">
             <div class="card-title">{{ title }}</div>

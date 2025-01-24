@@ -1,4 +1,4 @@
-interface IRegisterForm {
+export interface IRegisterForm {
   address: string;
   age: string;
   education: string;

@@ -1,4 +1,4 @@
-enum ProductStatusEnum {
+export enum ProductStatusEnum {
   NEW = "new",
   HOT = "hot",
 }

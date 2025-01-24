@@ -3,6 +3,7 @@ import axios from 'axios';
 import { onMounted } from 'vue';
 import { ref } from 'vue';
 import Swal from 'sweetalert2'
+import type { IRegisterForm } from '@/interface/registerFrom.interface';
 
 const formData = ref<IRegisterForm>({
     name: "",

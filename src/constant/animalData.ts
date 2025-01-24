@@ -1,3 +1,5 @@
+import type { IAnimals } from "@/interface/animal.interface";
+
 export const ANIMALS_DATA: IAnimals[] = [
   {
     title: "Dogs",

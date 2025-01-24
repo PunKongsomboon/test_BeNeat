@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue';
 import axios from 'axios';
 import { calculateTotal } from '@/util/calculateTotal';
+import type { IProductInCart } from '@/interface/product.interface';
 
 
 const itemInCart = ref<IProductInCart[]>([]);

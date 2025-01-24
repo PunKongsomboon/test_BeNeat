@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import UserComponent from '@/components/UserComponent.vue';
+import type { IUserData } from '@/interface/userData.interface';
 import { ref } from 'vue';
 
 const formData = ref<IUserData>({

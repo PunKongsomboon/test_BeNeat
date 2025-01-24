@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { IUserData } from '@/interface/userData.interface';
 import type { PropType } from 'vue';
 
 

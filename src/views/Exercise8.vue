@@ -5,6 +5,7 @@ import { ref } from 'vue';
 import { onMounted, watch } from 'vue';
 import router from '@/router/index';
 import { calculateTotal } from '@/util/calculateTotal';
+import type { IProduct, IProductInCart } from '@/interface/product.interface';
 
 const productData = ref<IProduct[]>([]);
 

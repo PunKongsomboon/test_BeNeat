@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { IItemList } from '@/interface/itemList.interface';
 import { ref } from 'vue';
 
 

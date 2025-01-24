@@ -1,4 +1,6 @@
-interface IProduct {
+import { ProductStatusEnum } from "@/enum/productStatus.enum";
+
+export interface IProduct {
   created_at: string;
   description: string;
   id: number;
@@ -9,6 +11,6 @@ interface IProduct {
   status: ProductStatusEnum;
 }
 
-interface IProductInCart extends IProduct {
+export interface IProductInCart extends IProduct {
   qty: number;
 }

@@ -6,6 +6,7 @@ import { onMounted, watch } from 'vue';
 import router from '@/router/index';
 import { calculateTotal } from '@/util/calculateTotal';
 import type { IProduct, IProductInCart } from '@/interface/product.interface';
+import { ProductStatusEnum } from '@/enum/productStatus.enum';
 
 const productData = ref<IProduct[]>([]);
 
@@ -51,6 +52,7 @@ const onCheckout = async () => {
     }
 }
 
+
 watch(() => itemInCart.value, () => {
     total.value = calculateTotal(itemInCart.value);
 }, { deep: true })
@@ -94,7 +96,10 @@ onMounted(() => {
                     <div class="card-body text-left">
                         <h5 class="card-title">
                             {{ item.name }}
-                            <span><span class="badge badge-success">New</span></span>
+                            <span v-if="item.status === ProductStatusEnum.NEW"><span
+                                    class="badge bg-success">New</span></span>
+                            <span v-else-if="item.status === ProductStatusEnum.HOT"><span
+                                    class="badge bg-danger">Hot</span></span>
                         </h5>
                         <div class="card-text text-small">
                             {{ item.description }}

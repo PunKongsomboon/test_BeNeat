@@ -2,6 +2,11 @@
   --primary-bg-color: #dfecf4;
   --primary-shadow-dark: #c0d4e0;
   --primary-shadow-light: #ffffff;
+
+  --bg-color: #e0e0e0;
+
+  /* --shadow-dark: #bebebe; */
+  /* --shadow-light: #ffffff; */
 }
 
 .neumorphic {

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { GenderEnum } from '@/enum/gender.enum';
 
 const formData = ref({
     name: '',
@@ -69,12 +70,12 @@ const clearDate = () => {
                             <label class="my-2">เพศ</label>
                             <div class="gap-2 d-flex">
                                 <input type="radio" id="maleChoice" name="genderChoice" v-model="formData.gender"
-                                    value="men" />
+                                    :value="GenderEnum.men" />
                                 <label for="maleChoice">ชาย</label>
                             </div>
                             <div class="gap-2 d-flex">
                                 <input type="radio" id="femaleChoice" name="genderChoice" v-model="formData.gender"
-                                    value="women" />
+                                    :value="GenderEnum.women" />
                                 <label for="femaleChoice">หญิง</label>
                             </div>
                         </div>
@@ -102,7 +103,7 @@ const clearDate = () => {
                         <div class="my-2">ชื่อ: {{ formData.name }}</div>
                         <div class="my-2">เบอร์โทร: {{ formData.phone }}</div>
                         <div class="my-2">ที่อยู่: {{ formData.address }}</div>
-                        <div class="my-2">เพศ: {{ formData.gender }}</div>
+                        <div class="my-2">เพศ: {{ formData.gender === GenderEnum.women ? 'หญิง' : 'ชาย' }}</div>
                         <div class="my-2">ระดับการศึกษา: {{ formData.education }}</div>
                         <div class="mt-4 text-center">
                             <button class="neumorphic-btn" @click="clearDate">Clear Data</button>
